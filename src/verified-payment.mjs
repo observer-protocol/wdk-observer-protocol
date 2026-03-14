@@ -1,6 +1,10 @@
 /**
  * Verified Payment Primitive
- * Core logic for verify-then-pay workflow
+ * Core logic for bilateral verify-then-pay workflow
+ *
+ * Bilateral verification ensures BOTH sender and recipient identities are
+ * cryptographically verified before payment execution. The payment becomes
+ * an identity-bound event with on-chain attestation.
  */
 
 import { ObserverClient } from './observer-client.mjs';
@@ -15,14 +19,21 @@ export class VerifiedPayment {
   }
 
   /**
-   * Execute a verified payment: verify recipient first, then pay if checks pass
+   * Execute a bilateral verified payment: verify recipient, attach sender identity,
+   * then pay if all checks pass.
+   *
+   * This implements bilateral verification where:
+   * - Recipient identity is verified before payment (who is being paid)
+   * - Sender identity is attached to the payment (who is paying)
+   * - Both verification events are recorded on-chain
+   *
    * @param {Object} params - Payment parameters
    * @param {string} params.recipientAlias - Observer Protocol alias of recipient
    * @param {string} params.amount - Amount to send
    * @param {string} params.chain - Chain to use (bitcoin, ethereum, polygon)
    * @param {string} [params.token] - Token for EVM chains (USDT, etc.)
    * @param {Function} params.executePayment - Async function to execute the actual payment
-   * @returns {Promise<Object>} Payment result with verification status
+   * @returns {Promise<Object>} Payment result with bilateral verification status
    */
   async execute({
     recipientAlias,

@@ -1,8 +1,12 @@
 /**
  * AgentWallet - WDK + Observer Protocol Integration
- * 
+ *
  * Combines Tether's WDK for self-custodial wallets with Observer Protocol
- * for cryptographic identity verification.
+ * for bilateral cryptographic identity verification.
+ *
+ * Bilateral verification means BOTH sender and recipient identities are
+ * verified before any payment executes. The payment becomes a
+ * cryptographically attested transaction with identity proofs from both parties.
  */
 
 import { ObserverClient } from './observer-client.mjs';
@@ -172,7 +176,12 @@ export class AgentWallet {
   }
 
   /**
-   * Send payment ONLY after verifying recipient identity
+   * Send payment ONLY after bilateral verification of both parties.
+   *
+   * Performs TWO verification checks:
+   * 1. Attaches the sender's OP identity to the payment (proves who is paying)
+   * 2. Verifies the recipient's identity before executing (proves who is being paid)
+   *
    * @param {Object} params - Payment parameters
    * @param {string} params.recipientAlias - Observer Protocol alias of recipient
    * @param {string} params.amount - Amount to send
