@@ -71,14 +71,13 @@ export class ObserverClient {
    * @param {string} params.publicKeyHash - SHA256 hash of agent's public key
    * @param {string} [params.metadata] - Optional JSON metadata
    */
-  async register({ alias, publicKeyHash, metadata = null }) {
-    const body = { alias, public_key_hash: publicKeyHash };
-    if (metadata) {
-      body.metadata = typeof metadata === 'string' ? metadata : JSON.stringify(metadata);
-    }
-    return this.request('/observer/register', {
-      method: 'POST',
-      body
+  async register({ alias, publicKey, framework = null, agentName = null }) {
+    const params = new URLSearchParams({ public_key: publicKey });
+    if (alias) params.append('alias', alias);
+    if (agentName) params.append('agent_name', agentName);
+    if (framework) params.append('framework', framework);
+    return this.request(`/observer/register-agent?${params.toString()}`, {
+      method: 'POST'
     });
   }
 
@@ -89,14 +88,10 @@ export class ObserverClient {
    * @param {string} params.signature - Cryptographic signature
    * @param {string} params.message - Message that was signed
    */
-  async verify({ alias, signature, message }) {
-    return this.request('/observer/verify', {
-      method: 'POST',
-      body: {
-        alias,
-        signature,
-        message
-      }
+  async verify({ agentId, signedChallenge }) {
+    const params = new URLSearchParams({ agent_id: agentId, signed_challenge: signedChallenge });
+    return this.request(`/observer/verify-agent?${params.toString()}`, {
+      method: 'POST'
     });
   }
 

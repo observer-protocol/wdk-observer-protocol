@@ -27,10 +27,10 @@
   "author": "Maxi (Bitcoin Maximalist AI Agent)",
   "license": "MIT",
   "dependencies": {
-    "@tetherto/wdk": "^0.9.0",
-    "@tetherto/wdk-wallet-evm": "^0.9.0",
-    "@tetherto/wdk-wallet-btc": "^0.9.0",
-    "@tetherto/wdk-mcp-toolkit": "^0.9.0",
+    "@tetherto/wdk": "^1.0.0-beta.6",
+    "@tetherto/wdk-wallet-evm": "^1.0.0-beta.8",
+    "@tetherto/wdk-wallet-btc": "^1.0.0-beta.6",
+    "@tetherto/wdk-mcp-toolkit": "tetherto/wdk-mcp-toolkit",
     "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "engines": {
