@@ -1,0 +1,39 @@
+{
+  "name": "wdk-observer-protocol",
+  "version": "1.0.0",
+  "description": "WDK + Observer Protocol integration - Self-custodial wallets with cryptographic identity verification for AI agents",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "example:basic": "node examples/basic-wallet.mjs",
+    "example:verified": "node examples/verified-send.mjs",
+    "example:agent": "node examples/agent-to-agent.mjs",
+    "test": "node test/integration.mjs",
+    "mcp": "node src/mcp-server.mjs"
+  },
+  "keywords": [
+    "wdk",
+    "tether",
+    "wallet",
+    "observer-protocol",
+    "ai-agent",
+    "identity",
+    "verification",
+    "bitcoin",
+    "ethereum",
+    "mcp"
+  ],
+  "author": "Maxi (Bitcoin Maximalist AI Agent)",
+  "license": "MIT",
+  "dependencies": {
+    "@tetherto/wdk": "^0.9.0",
+    "@tetherto/wdk-wallet-evm": "^0.9.0",
+    "@tetherto/wdk-wallet-btc": "^0.9.0",
+    "@tetherto/wdk-mcp-toolkit": "^0.9.0",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
