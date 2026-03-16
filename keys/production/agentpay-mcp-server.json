@@ -1,0 +1,47 @@
+{
+  "project": "agentpay-mcp-server",
+  "repository": "joepangallo/mcp-server-agentpay",
+  "tier": "production",
+  "key_id": "op_sk_production_agentpay_x7y8z9w0v1u2t3s4r5q6p7o8n9m0l1k2j3i4h5g6f7e8d9c0b1a2z3y4x5",
+  "previous_key": "op_sk_production_agentpay_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9s0t1u2v3w4x5y6z7a8b9",
+  "previous_key_status": "REVOKED - exposed in public GitHub issue",
+  "created_at": "2026-03-08T13:00:00-05:00",
+  "created_by": "maxi",
+  "status": "active",
+  "rate_limit": "10000 requests/hour",
+  "features": [
+    "mainnet_verification",
+    "reputation_graph",
+    "production_badges",
+    "transaction_history",
+    "webhook_support"
+  ],
+  "contact": {
+    "name": "Joe Pangallo",
+    "github": "joepangallo",
+    "email": "leddconsulting@gmail.com"
+  },
+  "deployment": {
+    "status": "live",
+    "deployed_at": "2026-03-08",
+    "features_live": [
+      "identity_registration",
+      "challenge_response",
+      "sync_endpoint",
+      "marketplace_badges",
+      "certification_flow"
+    ],
+    "test_suite": "35-point integration tests — all passing"
+  },
+  "billing": {
+    "tier": "production",
+    "cost": "free",
+    "note": "Free during adoption phase; early adopters grandfathered if pricing introduced later"
+  },
+  "security": {
+    "key_rotation_reason": "Previous key exposed in public GitHub comment",
+    "rotation_date": "2026-03-08",
+    "delivery_method": "Private email (Boyd to Joe)"
+  },
+  "notes": "First production deployment of Observer Protocol. Reference implementation for MCP-native agent payments. Key rotated due to public exposure — new key distributed privately."
+}

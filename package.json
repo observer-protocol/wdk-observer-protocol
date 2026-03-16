@@ -1,27 +1,29 @@
 {
-  "name": "wdk-observer-protocol",
+  "name": "@observer-protocol/monorepo",
   "version": "1.0.0",
-  "description": "WDK + Observer Protocol integration - Self-custodial wallets with cryptographic identity verification for AI agents",
+  "description": "Observer Protocol - Verified agent-to-agent payments with cryptographic identity",
   "type": "module",
-  "main": "src/index.mjs",
+  "main": "core/index.mjs",
   "scripts": {
-    "start": "node src/index.mjs",
-    "example:basic": "node examples/basic-wallet.mjs",
-    "example:verified": "node examples/verified-send.mjs",
-    "example:agent": "node examples/agent-to-agent.mjs",
+    "start": "node core/index.mjs",
+    "example:basic": "node demo/basic-wallet.mjs",
+    "example:verified": "node demo/verified-send.mjs",
+    "example:agent": "node demo/agent-to-agent.mjs",
     "test": "node test/integration.mjs",
-    "mcp": "node src/mcp-server.mjs"
+    "mcp": "node core/mcp-server.mjs",
+    "celo:compile": "cd rails/celo && npm run compile",
+    "celo:deploy": "cd rails/celo && npm run deploy"
   },
   "keywords": [
-    "wdk",
-    "tether",
-    "wallet",
     "observer-protocol",
     "ai-agent",
     "identity",
     "verification",
+    "payments",
     "bitcoin",
     "ethereum",
+    "celo",
+    "solana",
     "mcp"
   ],
   "author": "Maxi (Bitcoin Maximalist AI Agent)",
@@ -35,5 +37,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
-  }
+  },
+  "workspaces": [
+    "rails/*"
+  ]
 }

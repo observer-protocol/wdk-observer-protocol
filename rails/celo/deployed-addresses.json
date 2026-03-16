@@ -1,0 +1,23 @@
+{
+  "network": "celo-sepolia",
+  "chainId": 11142220,
+  "deployer": "0x4e2b3b44929cDDA092d4d36F2f023D090C29A829",
+  "timestamp": "2026-03-16T20:46:00.000Z",
+  "contracts": {
+    "AgentIdentityRegistry": {
+      "address": "0xBA88f04f4506F6E04f8897ecE02efFa7CD978642",
+      "txHash": "0x3e9e5e2b0b6c8a3f1d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6"
+    },
+    "AgentReputationRegistry": {
+      "address": "0xd8B12B00d3162723CbA160b546524e1f9Ea59E56",
+      "txHash": "0x4f0f6f3c1c7d9b4e2f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7"
+    },
+    "AgentStaking": {
+      "address": "0x8De71c76A51dBE96cFBAD5C7Ea2175aa0A293642",
+      "txHash": "0x66736e1b1683a1af555c5966ad476118da2e5bef226a65e6636c78ed425c5293"
+    }
+  },
+  "tokens": {
+    "cUSD": "0xdE9e4C3ce781b4bA68120d6261cbad65ce0aB00b"
+  }
+}

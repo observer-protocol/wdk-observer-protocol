@@ -1,0 +1,11 @@
+{
+  "agent": "AgentCommerceOS",
+  "contact": "alexchenai",
+  "sandboxKey": "sandbox-agcos-synthesis-2026-xyz789abc",
+  "endpoint": "https://sandbox.api.observerprotocol.org",
+  "rateLimit": "none",
+  "expires": "2026-04-06",
+  "created": "2026-03-06T20:00:00Z",
+  "status": "active",
+  "notes": "Dedicated environment for SYNTHESIS hackathon integration"
+}

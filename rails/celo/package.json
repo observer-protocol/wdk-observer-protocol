@@ -1,0 +1,30 @@
+{
+  "name": "@observer-protocol/celo-rail",
+  "version": "1.0.0",
+  "description": "Celo rail for Observer Protocol - EVM-based agent identity and payments",
+  "type": "module",
+  "main": "celo-client.mjs",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.cjs --network celo-sepolia",
+    "test": "hardhat test",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "observer-protocol",
+    "celo",
+    "ethereum",
+    "agent-identity",
+    "smart-contracts"
+  ],
+  "author": "Observer Protocol",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "viem": "^2.21.0"
+  }
+}

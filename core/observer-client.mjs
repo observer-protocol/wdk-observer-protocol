@@ -10,6 +10,7 @@ export class ObserverClient {
     this.endpoint = options.endpoint || process.env.OBSERVER_ENDPOINT || DEFAULT_ENDPOINT;
     this.apiKey = options.apiKey || process.env.OBSERVER_API_KEY || null;
     this.timeout = options.timeout || 30000;
+    this.celoEnabled = options.celoEnabled || false;
   }
 
   /**
@@ -197,6 +198,28 @@ export class ObserverClient {
     // Max 100
     const score = Math.min(100, 10 + (verifications * 5) + (registrations * 2));
     return score;
+  }
+
+  /**
+   * Register agent with both off-chain API and on-chain Celo registry
+   * @param {Object} params - Registration parameters
+   * @param {string} params.alias - Human-readable agent alias
+   * @param {string} params.publicKeyHash - SHA256 hash of agent's public key
+   * @param {string} params.framework - Agent framework identifier
+   */
+  async registerWithCelo({ alias, publicKeyHash, framework }) {
+    // 1. Off-chain registration (existing REST API)
+    const offChain = await this.register({ alias, publicKey: publicKeyHash, framework });
+
+    // 2. On-chain (lazy import celo-client to avoid hard dependency)
+    let onChainTx = null;
+    if (this.celoEnabled) {
+      const { registerAgentOnChain } = await import('../rails/celo/celo-client.mjs');
+      const result = await registerAgentOnChain({ publicKeyHash, alias, framework });
+      onChainTx = result.txHash;
+    }
+
+    return { offChain, onChainTx };
   }
 }
 

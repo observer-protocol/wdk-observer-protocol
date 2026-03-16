@@ -7,7 +7,7 @@
  * 3. Checking network stats
  */
 
-import { AgentWallet } from '../src/agent-wallet.mjs';
+import { AgentWallet } from '../core/agent-wallet.mjs';
 
 async function main() {
   console.log('═══════════════════════════════════════════════════════════════');
