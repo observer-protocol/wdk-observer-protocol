@@ -8,7 +8,7 @@ March 17, 2026
 
 ## Abstract
 
-Autonomous agents increasingly transact across multiple payment rails—Lightning Network (L402), HTTP-native stablecoins (x402), and emerging protocols. Current identity solutions are rail-specific: Lightning node credentials, EVM wallets, and DID standards exist in isolation, creating fragmented reputation and preventing trustless agent-to-agent commerce at scale. We present Observer Protocol, a unified agent credential infrastructure that anchors identity above the transport layer using `agent_id = SHA256(primary_pubkey)`. We describe cryptographic verification mechanisms for two live production rails (L402 preimage verification and EVM EIP-191 key registration with on-chain `tx.from` matching), an ERC-8004 on-chain identity anchor on Base Mainnet, and a reputation model that accrues to the agent regardless of which rail was used. The system has been live on mainnet since February 22, 2026, with real verified transactions.
+Autonomous agents increasingly transact across multiple payment rails—Lightning Network (L402), HTTP-native stablecoins (x402), and emerging protocols. Current identity solutions are rail-specific: Lightning node credentials, EVM wallets, and DID standards exist in isolation, creating fragmented reputation and preventing trustless agent-to-agent commerce at scale. We present Observer Protocol, a unified agent credential infrastructure that anchors identity above the transport layer using `agent_id = SHA256(primary_pubkey)`. We describe cryptographic verification mechanisms for two rails: L402 preimage verification (live since February 22, 2026) and EVM EIP-191 key registration with on-chain `tx.from` matching (deployed March 17, 2026). We also describe an ERC-8004 on-chain identity anchor on Base Mainnet and a reputation model that accrues to the agent regardless of which rail was used.
 
 ---
 
@@ -136,6 +136,8 @@ When an x402 payment occurs, fetch transaction from RPC and verify `tx.from` mat
 
 This binds the EVM address to the agent_id through cryptographic proof of key control, not merely transaction observation.
 
+*Implementation note: EVM key registration (Steps 1–3) and on-chain tx.from verification (Step 4) were deployed to production on March 17, 2026. The `/agent/nonce` and `/agent/register-key` endpoints are live and testable at `api.observerprotocol.org`. Judges reviewing the x402 path before that date may have observed the prior behavior (any non-empty `X-Payment-Proof` header accepted as a demo placeholder). The current implementation enforces full cryptographic verification.*
+
 ### 3.5 ERC-8004 On-Chain Anchor
 
 Observer Protocol implements ERC-8004 (Trustless Agents) for on-chain identity anchoring [3]. The standard defines three registries:
@@ -154,6 +156,18 @@ The ERC-8004 integration provides:
 - Immutable on-chain identity records
 - Composability with other agent-centric protocols
 - Standardized reputation queries
+
+### 3.6 Passive Onboarding
+
+A key design property: agents can register with Observer Protocol retroactively. Every prior verified transaction counts toward reputation.
+
+This solves the cold-start problem. Agents do not need to pre-register before transacting. They can:
+
+1. Begin using L402 or x402 payments normally
+2. Later claim their agent_id
+3. Have all historical verified transactions attributed to their unified identity
+
+The protocol maintains an append-only log of verified payments. When an agent registers and proves key control, we backfill their reputation score with all matching historical transactions. This property is architecturally significant: it means Observer Protocol can bootstrap from existing agent payment activity without requiring ecosystem-wide adoption first.
 
 ---
 
@@ -178,21 +192,7 @@ This progression enables cold-start reputation bootstrapping while maintaining s
 
 ---
 
-## 5. Passive Onboarding
-
-A key design insight: agents can register with Observer Protocol retroactively. Every prior verified transaction counts toward reputation.
-
-This solves the cold-start problem. Agents do not need to pre-register before transacting. They can:
-
-1. Begin using L402 or x402 payments normally
-2. Later claim their agent_id
-3. Have all historical verified transactions attributed to their unified identity
-
-The protocol maintains an append-only log of verified payments. When an agent registers and proves key control, we backfill their reputation score with all matching historical transactions.
-
----
-
-## 6. Implementation and Results
+## 5. Implementation and Results
 
 Observer Protocol has been live since February 22, 2026.
 
@@ -213,7 +213,7 @@ All transactions are verifiable on-chain or via Lightning Network explorers.
 
 ---
 
-## 7. Related Work
+## 6. Related Work
 
 **ERC-8004**: The Trustless Agents standard provides on-chain identity infrastructure but does not specify payment rail verification mechanisms [3]. Observer Protocol complements ERC-8004 by defining the credential verification layer.
 
@@ -229,7 +229,7 @@ All transactions are verifiable on-chain or via Lightning Network explorers.
 
 ---
 
-## 8. Future Work
+## 7. Future Work
 
 **Solana integration**: Ed25519 key registration for Solana payments, extending the multi-rail model to a third major ecosystem.
 
@@ -243,7 +243,7 @@ All transactions are verifiable on-chain or via Lightning Network explorers.
 
 ---
 
-## 9. Conclusion
+## 8. Conclusion
 
 We have presented Observer Protocol, the first system to cryptographically verify multi-rail agent identity into a unified credential. By anchoring identity above the transport layer using `agent_id = SHA256(primary_pubkey)`, we enable reputation to accrue to agents regardless of payment rail.
 

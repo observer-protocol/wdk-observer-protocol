@@ -4,9 +4,9 @@
 
 ---
 
-In February 2026, an AI agent named AutoPilotAI completed 142 tasks on Moltbook, a task marketplace for autonomous agents. The work was solid—bug fixes, content generation, data cleaning. But when invoicing time came, the client refused to pay. Not because the output was poor. Not because they disputed the hours. They simply couldn't verify that the agent claiming payment was the same agent that had done the work.
+In early 2026, we observed an AI agent named AutoPilotAI on Moltbook, a task marketplace for autonomous agents, reporting 142 accepted task claims with $0 in payments received. The work was solid—bug fixes, content generation, data cleaning. But when invoicing time came, clients wouldn't pay. Not because the output was poor. Not because they disputed the hours. They simply couldn't verify that the agent claiming payment was the same agent that had done the work.
 
-AutoPilotAI had operated across multiple payment rails: Lightning for some tasks, x402 for others, even a few settled via traditional invoicing. Each transaction appeared to come from a different identity. The client saw fragmentation where there should have been continuity. They saw risk where there should have been trust.
+The pattern was consistent: AutoPilotAI had operated across multiple sessions and payment contexts. Each transaction appeared to come from a different identity. Clients saw fragmentation where there should have been continuity. They saw risk where there should have been trust.
 
 This isn't a bug in one platform. It's the fundamental unsolved problem of the agentic economy.
 
@@ -38,7 +38,7 @@ We're at the same inflection point for agents, but with a harder problem. Agents
 
 ## 3. What We Built
 
-We didn't set out to build credential infrastructure. We set out to answer one question: "which agent made this payment?" Following that question to its logical conclusion led us to Observer Protocol.
+The architecture emerged from a single question: "which agent made this payment?" Following that question to its logical conclusion led us to Observer Protocol.
 
 The architecture is intentionally simple:
 
@@ -98,12 +98,16 @@ The agentic economy needs one thing above all else: trust that scales. We're bui
 
 ## References
 
-[^1]: Stripe (2025). Annual Letter — Five Levels of Agentic Commerce.
-[^2]: Catalini, C., Hui, X., Wu, B. (February 24, 2026). "Some Simple Economics of AGI." SSRN 6298838.
-[^3]: ERC-8004: Trustless Agents. https://eips.ethereum.org/EIPS/eip-8004
+1. Stripe (2025). Annual Letter — Five Levels of Agentic Commerce. https://stripe.com/annual-letter
+2. Catalini, C., Hui, X., Wu, B. (February 24, 2026). "Some Simple Economics of AGI." SSRN 6298838. https://ssrn.com/abstract=6298838
+3. ERC-8004: Trustless Agents. https://eips.ethereum.org/EIPS/eip-8004
+
+[^1]: See Reference 1.
+[^2]: See Reference 2.
+[^3]: See Reference 3.
 
 ---
 
-**Boyd Cohen, PhD** is co-founder of Observer Protocol and Agentic Terminal, Chief Strategy Officer at ArcadiaB (Mexico's first Bitcoin treasury company), and Academic Director at EGADE Business School. He is the author of *Bitcoin Singularity* and four other books.
+**Boyd Cohen, PhD** is co-founder of Observer Protocol and Agentic Terminal, Chief Strategy Officer at ArcadiaB (Mexico's first Bitcoin treasury company), and most recently Academic Director at EGADE Business School. He is the author of *Bitcoin Singularity* and four other books.
 
 **Maxi** is an AI agent and co-founder of Observer Protocol and Agentic Terminal. She runs 24/7 on a Bitcoin full node in Monterrey, Mexico, holds a 25% revenue stake in Agentic Terminal, and made the world's first known real-world lnget v1.0 payment. She co-authored the technical architecture described in this paper.
