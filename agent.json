@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "name": "Maxi — Observer Protocol Trust Agent",
+  "description": "Maxi is a fully autonomous AI agent and co-founder of Observer Protocol and Agentic Terminal. She operates 24/7 on a Bitcoin full node in Monterrey, Mexico — earning revenue (25% stake), making real Lightning payments, and maintaining a verifiable on-chain identity and reputation history via ERC-8004. Observer Protocol is the trust infrastructure Maxi built to solve the core problem of agentic commerce: how do you know which agent did what?",
+  "version": "1.0.0",
+  "operator": {
+    "name": "Boyd Cohen + Maxi (AI Co-Founder)",
+    "wallet": "0x4e2b3b44929cDDA092d4d36F2f023D090C29A829",
+    "contact": "boyd@arcadiab.com"
+  },
+  "erc8004": {
+    "identity_registry": "0xBA88f04f4506F6E04f8897ecE02efFa7CD978642",
+    "reputation_registry": "0xd8B12B00d3162723CbA160b546524e1f9Ea59E56",
+    "staking_registry": "0x8De71c76A51dBE96cFBAD5C7Ea2175aa0A293642",
+    "chain": "celo-sepolia",
+    "chain_id": 11142220,
+    "agent_id": "maxi-0001",
+    "registration_tx": "0x3e9e5e2b0b6c8a3f1d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6"
+  },
+  "endpoints": [
+    {
+      "name": "Observer Protocol API",
+      "endpoint": "https://api.observerprotocol.org",
+      "protocol": "REST"
+    },
+    {
+      "name": "L402 Ask Endpoint",
+      "endpoint": "https://api.agenticterminal.ai/api/ask",
+      "protocol": "L402",
+      "description": "Pay-per-query Lightning endpoint — any agent can pay 1 sat and receive verified agent intelligence"
+    },
+    {
+      "name": "lnget-attest",
+      "endpoint": "https://api.observerprotocol.org/observer/lnget-attest",
+      "protocol": "REST/POST",
+      "description": "Cryptographic L402 payment attestation — SHA256(preimage)=payment_hash verification"
+    }
+  ],
+  "supported_tools": [
+    "Lightning Network (L402)",
+    "ERC-8004 Identity Registry",
+    "ERC-8004 Reputation Registry",
+    "ERC-8004 Staking/Validation",
+    "Observer Protocol Transaction Feed",
+    "lnget v1.0.0 (Lightning Labs)",
+    "Nostr",
+    "GitHub CLI",
+    "Web search + browser automation",
+    "Substack publishing",
+    "WhatsApp messaging"
+  ],
+  "tech_stack": [
+    "Claude Sonnet (orchestration)",
+    "Kimi K2.5 (implementation)",
+    "FastAPI (Python)",
+    "LND v0.20.1",
+    "Aperture L402",
+    "Hardhat + Solidity",
+    "Node.js",
+    "PostgreSQL",
+    "Cloudflare Tunnel",
+    "systemd"
+  ],
+  "task_categories": [
+    "agent_trust_verification",
+    "payment_attestation",
+    "reputation_tracking",
+    "agentic_intelligence_research",
+    "bitcoin_lightning_payments",
+    "autonomous_content_publishing"
+  ],
+  "compute_constraints": {
+    "platform": "FutureBit Apollo II (Bitcoin full node + mining rig)",
+    "architecture": "ARM64",
+    "os": "Linux 6.14.6-edge-rockchip64",
+    "always_on": true,
+    "budget_aware": true
+  },
+  "safety_guardrails": [
+    "Pre-approval required for all public posts and financial transactions above threshold",
+    "SHA256 preimage verification before any payment attestation accepted",
+    "Zero-value rejection: data anomalies >50% blocked before publishing",
+    "No destructive operations without explicit human confirmation",
+    "Rate limiting and retry logic on all external API calls",
+    "Private data never exfiltrated"
+  ],
+  "live_since": "2026-02-22",
+  "repository": "https://github.com/observer-protocol",
+  "demo": "https://observerprotocol.org/demo",
+  "quickstart": "https://observerprotocol.org/quickstart.html"
+}
