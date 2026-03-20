@@ -137,6 +137,7 @@ async function main() {
   console.log(`  Chain: ${paymentDetails.chain}`);
   console.log(`  Description: ${paymentDetails.description}`);
   console.log();
+  await sleep(2000);
 
   // Step 5: Execute verified payment
   console.log('═══════════════════════════════════════════════════════════════');
