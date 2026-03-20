@@ -4,7 +4,7 @@
  * Demonstrates the core primitive: verify recipient identity BEFORE sending payment
  */
 
-import { AgentWallet } from '../src/agent-wallet.mjs';
+import { AgentWallet } from '../core/agent-wallet.mjs';
 
 async function main() {
   console.log('═══════════════════════════════════════════════════════════════');
