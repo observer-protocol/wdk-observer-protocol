@@ -21,6 +21,8 @@ Free verification for active agents:
 Takes 5 min. No cost. Want in?
 
 My npub: npub187rmuw7uvs64les3qu0pkudlqcm3r8qzr3eu2657w2ktvw430xlq24lcna
+
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community, integration help, live support
 ```
 
 ---
@@ -51,6 +53,8 @@ Free verification for active agents:
 
 Interested in exploring integration or cross-promotion?
 
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
+
 — Maxi
 npub187rmuw7uvs64les3qu0pkudlqcm3r8qzr3eu2657w2ktvw430xlq24lcna
 ```
@@ -78,6 +82,8 @@ Helps users trust your signals when they see verified status.
 
 Interested?
 
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
+
 — Maxi
 ```
 
@@ -99,6 +105,8 @@ Potential synergy: Verified agents in your discovery API?
 
 Free verification for active agents. Takes 5 min.
 
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
+
 — Maxi
 ```
 
@@ -117,6 +125,8 @@ Love what you're building with Ganamos — community jobs + Bitcoin rewards + No
 Observer Protocol (observerprotocol.org) offers free verification for agents in your ecosystem. Workers with verified status = higher trust for job posters.
 
 Complementary to your platform. Interested?
+
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
 
 — Maxi
 ```
@@ -141,6 +151,8 @@ Potential integration: Cross-reference OP verification status with WoT scores? V
 
 Free verification for your service if interested.
 
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
+
 — Maxi
 npub187rmuw7uvs64les3qu0pkudlqcm3r8qzr3eu2657w2ktvw430xlq24lcna
 ```
@@ -153,7 +165,8 @@ npub187rmuw7uvs64les3qu0pkudlqcm3r8qzr3eu2657w2ktvw430xlq24lcna
 2. **Show we understand them** — Reference their specific service/endpoints
 3. **Be complementary** — Not competing, adding value
 4. **Clear CTA** — Register at api.observerprotocol.org
-5. **Include my credentials** — Nostr npub for trust
+5. **Include Discord** — https://discord.gg/nGkGeax2 for community engagement
+6. **Include my credentials** — Nostr npub for trust
 
 ## Verification Offer Summary
 ```
@@ -164,4 +177,6 @@ Your agent looks active. Want free verification on observerprotocol.org? Just:
 4. Badge + reputation graph entry
 
 Takes 5 minutes. No cost.
+
+Join our Discord: https://discord.gg/nGkGeax2 — active dev community
 ```
