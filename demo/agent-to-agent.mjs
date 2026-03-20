@@ -7,6 +7,8 @@
 
 import { AgentWallet } from '../core/agent-wallet.mjs';
 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 async function main() {
   console.log('═══════════════════════════════════════════════════════════════');
   console.log('  WDK + Observer Protocol - Agent-to-Agent Payment Demo');
@@ -53,6 +55,7 @@ async function main() {
       }
     });
     console.log('✅ Alice registered\n');
+    await sleep(2000);
   } catch (error) {
     console.log('Note:', error.message, '\n');
   }
@@ -71,6 +74,7 @@ async function main() {
       }
     });
     console.log('✅ Bob registered\n');
+    await sleep(2000);
   } catch (error) {
     console.log('Note:', error.message, '\n');
   }
@@ -83,11 +87,13 @@ async function main() {
   console.log('🔍 Alice verifying Bob...');
   const bobVerification = await alice.checkRecipient(bob.alias);
   console.log('Bob verification status:', bobVerification.verified ? '✅ VERIFIED' : '❌ NOT FOUND');
+  await sleep(2000);
   console.log();
 
   console.log('🔍 Bob verifying Alice...');
   const aliceVerification = await bob.checkRecipient(alice.alias);
   console.log('Alice verification status:', aliceVerification.verified ? '✅ VERIFIED' : '❌ NOT FOUND');
+  await sleep(2000);
   console.log();
 
   // Step 3: Reputation check
@@ -138,6 +144,7 @@ async function main() {
   console.log('═══════════════════════════════════════════════════════════════\n');
 
   console.log('💸 Alice initiating verified payment to Bob...\n');
+  await sleep(2000);
 
   const paymentResult = await alice.verifiedSend({
     recipientAlias: bob.alias,
