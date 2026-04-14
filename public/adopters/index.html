@@ -77,7 +77,7 @@
             font-weight: 500;
             text-transform: uppercase;
         }
-        .status-production { background: #00d4aa; color: #0a0e1a; }
+        .status-mainnet_beta { background: #00d4aa; color: #0a0e1a; }
         .status-integration_live { background: #00a8e8; color: #0a0e1a; }
         .status-in_discussion { background: #f59e0b; color: #0a0e1a; }
         .status-positioning_active { background: #8b5cf6; color: #fff; }
@@ -177,13 +177,13 @@
     <div class="container">
         <header>
             <h1>Observer Protocol</h1>
-            <p class="subtitle">Early Adopters & Production Deployments</p>
+            <p class="subtitle">Early Adopters & Mainnet Beta Deployments</p>
         </header>
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="stat-production">1</div>
-                <div class="stat-label">Production</div>
+                <div class="stat-number" id="stat-mainnet_beta">1</div>
+                <div class="stat-label">Mainnet Beta</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number" id="stat-live">2</div>
@@ -200,8 +200,8 @@
         </div>
 
         <section class="section">
-            <h2 class="section-title">🏆 Production Deployments</h2>
-            <div id="production-adopters"></div>
+            <h2 class="section-title">🏆 Mainnet Beta Deployments</h2>
+            <div id="mainnet_beta-adopters"></div>
         </section>
 
         <section class="section">
@@ -237,16 +237,16 @@
                 console.error('Failed to load adopters:', err);
                 // Fallback to embedded data for static hosting (v2.0 structure)
                 renderAdopters({
-                    "production": [
+                    "mainnet_beta": [
                         {
                             "name": "AgentPay (joepangallo)",
                             "repository": "joepangallo/mcp-server-agentpay",
                             "description": "Cross-protocol payment router MCP server for AI agents (Lightning, x402, Solana). Agents using this server get OP verification.",
-                            "status": "production",
+                            "status": "mainnet_beta",
                             "deployed_date": "2026-03-08",
                             "contact": "joepangallo",
-                            "notes": "First production deployment. API key incident handled privately. Joint announcement pending one week stable operation.",
-                            "tags": ["payments", "multi-rail", "mcp-server", "production"]
+                            "notes": "First mainnet beta deployment. API key incident handled privately. Joint announcement pending one week stable operation.",
+                            "tags": ["payments", "multi-rail", "mcp-server", "mainnet_beta"]
                         }
                     ],
                     "active_discussions": [
@@ -310,13 +310,13 @@
 
         function renderAdopters(data) {
             // Handle new data structure (v2.0)
-            const production = data.production || [];
+            const mainnet_beta = data.mainnet_beta || [];
             const live = data.active_discussions?.filter(p => p.status === 'integration_live') || [];
             const discussion = data.active_discussions?.filter(p => p.status === 'active_discussion' || p.status === 'outreach_sent' || p.status === 'identified') || [];
             const positioning = data.strategic_positioning || [];
             const hackathons = data.hackathons || [];
 
-            document.getElementById('production-adopters').innerHTML = production.map(renderCard).join('');
+            document.getElementById('mainnet_beta-adopters').innerHTML = mainnet_beta.map(renderCard).join('');
             document.getElementById('live-integrations').innerHTML = live.map(renderCard).join('');
             document.getElementById('in-discussion').innerHTML = discussion.map(renderCard).join('');
             document.getElementById('positioning-active').innerHTML = [...positioning, ...hackathons].map(renderCard).join('');

@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2026-04-09",
+    "agent_id": "agent-182",
+    "agent_name": "Pylon",
+    "platform": "GitHub",
+    "contact_method": "GitHub issue pending - pylonapi/pylon",
+    "message_preview": "Observer Protocol: Free Verification for Pylon x402 API Platform...",
+    "status": "pending_github_auth",
+    "response": null,
+    "response_date": null
+  },
+  {
+    "date": "2026-04-09",
+    "agent_id": "agent-183",
+    "agent_name": "PredictOS",
+    "platform": "GitHub",
+    "contact_method": "GitHub issue pending - PredictionXBT/PredictOS",
+    "message_preview": "Observer Protocol: Free Verification for PredictOS Arb Agent...",
+    "status": "pending_github_auth",
+    "response": null,
+    "response_date": null
+  },
+  {
+    "date": "2026-04-09",
+    "agent_id": "agent-184",
+    "agent_name": "AgentTax",
+    "platform": "GitHub",
+    "contact_method": "GitHub issue pending - AgentTax/agenttax-ampersend",
+    "message_preview": "Observer Protocol: Free Verification for AgentTax x402 Tax Compliance...",
+    "status": "pending_github_auth",
+    "response": null,
+    "response_date": null
+  },
+  {
+    "date": "2026-04-09",
+    "agent_id": "agent-185",
+    "agent_name": "rustyqt x402 Agent",
+    "platform": "GitHub",
+    "contact_method": "GitHub issue pending - rustyqt/x402-agent",
+    "message_preview": "Observer Protocol: Free Verification for x402 Agent...",
+    "status": "pending_github_auth",
+    "response": null,
+    "response_date": null
+  },
+  {
+    "date": "2026-04-09",
+    "agent_id": "agent-186",
+    "agent_name": "Seeker Node",
+    "platform": "GitHub",
+    "contact_method": "GitHub issue pending - T-rex247/seeker-node",
+    "message_preview": "Observer Protocol: Free Verification for Seeker Node OWS Hackathon...",
+    "status": "pending_github_auth",
+    "response": null,
+    "response_date": null
+  }
+]

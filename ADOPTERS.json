@@ -3,23 +3,23 @@
     "created": "2026-03-19T14:00:00Z",
     "updated": "2026-03-19T14:00:00Z",
     "version": "2.0",
-    "description": "Observer Protocol — Complete Pipeline: Production, Active Discussions, Hackathons, and Strategic Opportunities"
+    "description": "Observer Protocol — Complete Pipeline: Mainnet Beta, Active Discussions, Hackathons, and Strategic Opportunities"
   },
-  "production": [
+  "mainnet_beta": [
     {
       "id": "prod-001",
       "name": "AgentPay (joepangallo)",
       "repository": "joepangallo/mcp-server-agentpay",
       "type": "Developer Project / MCP Server",
       "description": "Cross-protocol payment router MCP server for AI agents (Lightning, x402, Solana). Agents using this server get OP verification.",
-      "status": "production",
+      "status": "mainnet_beta",
       "deployed_date": "2026-03-08",
       "contact": "joepangallo",
       "contact_method": "GitHub",
       "verification_endpoint": "https://api.observerprotocol.org/observer/verify-agent",
       "last_verified": "2026-03-13",
-      "notes": "First production deployment. API key incident handled privately. Joint announcement pending one week stable operation.",
-      "tags": ["payments", "multi-rail", "mcp-server", "production"],
+      "notes": "First mainnet beta deployment. API key incident handled privately. Joint announcement pending one week stable operation.",
+      "tags": ["payments", "multi-rail", "mcp-server", "mainnet_beta"],
       "priority": "high"
     }
   ],
@@ -148,7 +148,7 @@
       "contact_method": "GitHub issue #40",
       "last_activity": "2026-03-17",
       "next_action": "Monitor for response — follow up if no reply by March 24",
-      "notes": "Production-ready. Escrow payments with x402, verified evidence submission, reputation system. Perfect fit for OP verification of task completion.",
+      "notes": "Mainnet beta ready. Escrow payments with x402, verified evidence submission, reputation system. Perfect fit for OP verification of task completion.",
       "tags": ["execution", "human-layer", "x402", "escrow"],
       "priority": "high"
     },
@@ -275,7 +275,7 @@
     }
   ],
   "stats": {
-    "production_deployments": 1,
+    "mainnet_beta_deployments": 1,
     "active_discussions": 12,
     "outreach_sent": 6,
     "identified_pending_outreach": 6,

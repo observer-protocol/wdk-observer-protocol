@@ -6,6 +6,27 @@ A toolkit that gives AI agents **self-custodial multi-chain wallets** (via Tethe
 
 ---
 
+## 🔐 OWS Integration
+
+Observer Protocol natively supports OWS-provisioned agents with DID-based identity, Ed25519 verification, and portable reputation across Solana, EVM, and Bitcoin.
+
+| Resource | Link |
+|----------|------|
+| **OWS Quickstart Guide** | [docs/ows-quickstart.md](docs/ows-quickstart.md) |
+| **Solana Native Support** | [docs/solana-quickstart.md](docs/solana-quickstart.md) |
+| **Live Demo** | [observerprotocol.org/ows](https://observerprotocol.org/quickstart-ows.html) |
+
+**Key Features:**
+- ✅ One vault, all chains — BIP-44 derivation paths for EVM, Solana, and Bitcoin
+- ✅ DID-based agent identity (`did:web:observerprotocol.org:agents:{id}`)
+- ✅ Ed25519 signature verification for Solana agents
+- ✅ W3C Verifiable Agent Credentials (VAC)
+- ✅ Cross-chain portable reputation
+
+---
+
+---
+
 ## 🎯 The Problem
 
 AI agents are becoming economic actors. They need to:
@@ -205,7 +226,7 @@ ENCRYPTION_KEY=your-secure-key-here
 
 1. **Real Infrastructure** — Observer Protocol is live at `api.observerprotocol.org` with real agents
 2. **Solves a Real Problem** — Trustless agent-to-agent commerce requires both payment AND bilateral verification
-3. **Production Ready** — Working code, not a mockup
+3. **Mainnet Beta** — Working code on mainnet, actively testing
 4. **Economic Soundness** — Verified payments reduce fraud, increase agent autonomy
 5. **Extensible** — MCP server makes it usable by any AI agent
 6. **Proven Scale** — 79.3M+ cumulative transactions processed across integrated rails
@@ -221,7 +242,7 @@ ENCRYPTION_KEY=your-secure-key-here
 - **Registered Agents:** Including Maxi (#0001) with live Lightning node
 - **Network Stats:** `GET /api/v1/stats`
 
-### Historic First: Bilateral Verification in Production
+### Historic First: Bilateral Verification on Mainnet Beta
 
 The **Maxi (#0001) ↔ Vicky (#0002)** verified agent-to-agent Lightning payment on **February 22, 2026** was the proof of concept for this exact bilateral model — both sender and recipient identities cryptographically verified before the payment executed. This is now the standard for all Observer Protocol transactions.
 

@@ -136,7 +136,7 @@ When an x402 payment occurs, fetch transaction from RPC and verify `tx.from` mat
 
 This binds the EVM address to the agent_id through cryptographic proof of key control, not merely transaction observation.
 
-*Implementation note: EVM key registration (Steps 1–3) and on-chain tx.from verification (Step 4) were deployed to production on March 17, 2026. The `/agent/nonce` and `/agent/register-key` endpoints are live and testable at `api.observerprotocol.org`. Judges reviewing the x402 path before that date may have observed the prior behavior (any non-empty `X-Payment-Proof` header accepted as a demo placeholder). The current implementation enforces full cryptographic verification.*
+*Implementation note: EVM key registration (Steps 1–3) and on-chain tx.from verification (Step 4) were deployed to mainnet beta on March 17, 2026. The `/agent/nonce` and `/agent/register-key` endpoints are live and testable at `api.observerprotocol.org`. Judges reviewing the x402 path before that date may have observed the prior behavior (any non-empty `X-Payment-Proof` header accepted as a demo placeholder). The current implementation enforces full cryptographic verification.*
 
 ### 3.5 ERC-8004 On-Chain Anchor
 
@@ -146,7 +146,7 @@ Observer Protocol implements ERC-8004 (Trustless Agents) for on-chain identity a
 2. **Reputation Registry**: Scores and transaction history
 3. **Validation Registry**: Staking and slashing mechanisms
 
-Contracts are deployed on Base Mainnet for production use and Celo Sepolia for testing:
+Contracts are deployed on Base Mainnet for mainnet beta use and Celo Sepolia for testing:
 
 ```
 AgentIdentityRegistry (Celo Sepolia): 0xBA88f04f4506F6E04f8897ecE02efFa7CD978642

@@ -90,7 +90,7 @@ L402_MAX_PAYMENT_MSATS=10000000
 
 ## Network Support
 
-- **Bitcoin Mainnet** - Production payments
+- **Bitcoin Mainnet** - Mainnet beta payments
 - **Bitcoin Testnet** - Development and testing
 - **Regtest** - Local development
 

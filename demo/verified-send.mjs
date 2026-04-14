@@ -25,7 +25,7 @@ async function main() {
   console.log();
 
   // The recipient we want to send to
-  // In production, this would be a real registered agent
+  // In mainnet beta, this would be a real registered agent
   const recipientAlias = 'maxi-0001'; // Maxi is a real verified agent!
 
   console.log(`🎯 Target recipient: ${recipientAlias}\n`);

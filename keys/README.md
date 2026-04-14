@@ -24,7 +24,7 @@ node /observer-protocol/scripts/generate-key.js --tier {sandbox|production|enter
 ## Current Keys
 
 ### Production Tier
-- **agentpay-mcp-server** — First production deployment (Mar 8, 2026)
+- **agentpay-mcp-server** — First mainnet beta deployment (Mar 8, 2026)
 
 ### Sandbox Tier
 - agentpay-mcp-server (testing)

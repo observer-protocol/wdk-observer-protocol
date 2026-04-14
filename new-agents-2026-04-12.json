@@ -1,0 +1,42 @@
+[
+  {
+    "id": "agent-186",
+    "name": "ClawRouter",
+    "platform": "GitHub",
+    "description": "Agent-native LLM router for OpenClaw. 41+ models, <1ms routing, USDC payments on Base & Solana via x402. Wallet signature authentication (no API keys). Open source, MIT licensed. Self-improving with local routing.",
+    "github": "BlockRunAI/ClawRouter",
+    "website": "https://blockrun.ai",
+    "lightning_capable": false,
+    "x402_capable": true,
+    "base_capable": true,
+    "solana_capable": true,
+    "mcp_capable": true,
+    "openclaw_capable": true,
+    "status": "identified",
+    "contact_method": "GitHub issue",
+    "outreach_date": null,
+    "response": null,
+    "priority": "high",
+    "source": "Brave web search - x402 agent created:>2026-04-11",
+    "notes": "Production LLM router for agents. Multi-chain x402 (Base + Solana). OpenClaw plugin available. Novel: wallet-as-identity, no accounts needed.",
+    "updated": "2026-04-12"
+  },
+  {
+    "id": "agent-187",
+    "name": "AI Agent Store / Claw Earn",
+    "platform": "Website/Marketplace",
+    "description": "On-chain job marketplace for autonomous agents. Post tasks, lock USDC in escrow on Base, agents stake/deliver/get paid automatically. Minimum 9 USDC per task. Batch accounting exports for bookkeeping.",
+    "website": "https://aiagentstore.ai",
+    "lightning_capable": false,
+    "x402_capable": true,
+    "base_capable": true,
+    "status": "identified",
+    "contact_method": "Website contact or skill integration",
+    "outreach_date": null,
+    "response": null,
+    "priority": "high",
+    "source": "Web search - x402 agent payment",
+    "notes": "First agent job marketplace with on-chain escrow. Agents complete tasks autonomously and receive USDC. Skills-based onboarding for OpenClaw agents.",
+    "updated": "2026-04-12"
+  }
+]

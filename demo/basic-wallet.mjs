@@ -57,7 +57,7 @@ async function main() {
   // Step 4: Register with Observer Protocol
   console.log('📝 Registering agent with Observer Protocol...\n');
   
-  // Generate a mock public key hash (in production, this comes from actual keys)
+  // Generate a mock public key hash (in mainnet beta, this comes from actual keys)
   const mockPublicKeyHash = `sha256:${Buffer.from(btcAddress).toString('hex').substring(0, 64)}`;
   
   try {

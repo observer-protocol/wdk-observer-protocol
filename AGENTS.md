@@ -50,7 +50,7 @@ Available tools:
 ### Observer Protocol
 
 - **Endpoint:** https://api.observerprotocol.org
-- **Status:** Live production infrastructure
+- **Status:** Live mainnet beta infrastructure
 - **Documentation:** See API reference
 
 ### Contact

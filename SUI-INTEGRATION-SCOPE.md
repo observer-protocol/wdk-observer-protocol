@@ -335,7 +335,7 @@ ALTER TABLE agent_keys ADD COLUMN raw_pubkey BYTEA;  -- original pubkey bytes
 - **L** = 3-4 weeks
 - **XL** = 1-2 months
 
-**Overall: M-L (Medium-Large)** — approximately 3-4 weeks of focused engineering effort for a production-ready implementation covering Ed25519 and Secp256k1.
+**Overall: M-L (Medium-Large)** — approximately 3-4 weeks of focused engineering effort for a mainnet beta-ready implementation covering Ed25519 and Secp256k1.
 
 ---
 
@@ -459,7 +459,7 @@ However, **timing matters**:
 - Build minimal proof-of-concept (Ed25519 only, testnet only)
 
 **Phase 2 (Trigger: 3+ Sui agent projects requesting integration OR Talus mainnet launch):**
-- Full production implementation (this scope document)
+- Full mainnet beta implementation (this scope document)
 - Mainnet support
 - Both Ed25519 and Secp256k1
 
