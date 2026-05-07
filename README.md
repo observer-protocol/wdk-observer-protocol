@@ -25,6 +25,28 @@ Observer Protocol natively supports OWS-provisioned agents with DID-based identi
 
 ---
 
+## 🛡️ Chargeback Defense for Agentic Commerce (May 2026)
+
+**Live partnership demo:** [observerprotocol.org/chargeback-prevention/wdk](https://observerprotocol.org/chargeback-prevention/wdk/)
+
+The full WDK + Observer Protocol flow, walked through a real LatAm scenario: Martina in Buenos Aires asks her agent Vicky to buy an Overtech R29 Q5 mountain bike on Mercado Libre — ARS 253.999, 49% off, ≈235 USDT via x402. Martina has not configured a delegation policy yet (a new chargeback-prevention requirement for agentic payments on Mercado Libre), so Vicky's purchase soft-rejects. Magic-link authorization → bilateral handshake → USDT-on-x402 settlement → cryptographically attested receipt that is independently verifiable.
+
+Walks beat-by-beat at `/walkthrough`. Canonical post-settlement Sovereign dashboard view: [app.agenticterminal.io/sovereign/dashboard?demo=true](https://app.agenticterminal.io/sovereign/dashboard?demo=true).
+
+---
+
+## 📦 Packages (May 2026)
+
+Two wallet primitives shipped as the durable infrastructure under the chargeback-defense narrative. Both currently `0.1.0-beta.1`, local-only pending publish decision.
+
+### [@observer-protocol/wdk-protocol-trust](https://github.com/observer-protocol/wdk-protocol-trust)
+
+WDK protocol module: agent identity, bilateral trust handshake, ERC-8004 payment attestation. Proposes `TrustProtocol` as a fifth WDK protocol category alongside Bridge / Swap / Fiat / Lending. 17/17 tests passing.
+
+### [@observer-protocol/wdk-lightning-verifier](https://github.com/observer-protocol/wdk-lightning-verifier)
+
+Wallet-agnostic Lightning verification: preimage proofs, three-tier verification through Observer Protocol, reputation attribution. Works for Alby / LND / Phoenix / Strike — not just WDK. 14/14 tests passing.
+
 ---
 
 ## 🎯 The Problem
@@ -301,6 +323,15 @@ curl https://api.observerprotocol.org/observer/feed
 
 ---
 
+## 🚄 May 2026 — WDK + OP Partnership Demo
+
+- **Two new wallet primitives shipped** as `@observer-protocol/wdk-protocol-trust` and `@observer-protocol/wdk-lightning-verifier` (see Packages section above). Both `0.1.0-beta.1`, 17/17 + 14/14 tests passing, three of four trust methods verified live against `api.observerprotocol.org`.
+- **Chargeback defense demo live** at [observerprotocol.org/chargeback-prevention/wdk](https://observerprotocol.org/chargeback-prevention/wdk/) — partnership artifact framing the Mercado Libre / Vicky / Martina scenario across the full flow (soft-reject → magic-link → bilateral handshake → USDT-on-x402 settlement → cryptographically attested receipt).
+- **Sovereign dashboard demo URL** at [app.agenticterminal.io/sovereign/dashboard?demo=true](https://app.agenticterminal.io/sovereign/dashboard?demo=true) populated with illustrative agent-centric reputation data (Vicky's DID at top, AT-ARS Score 44 reflecting one verified receipt, single Verified Activity row, two registration-fresh attestations).
+- **Demo-access shortcut:** `/auth/redeem` one-click cookie-set page on the prod AT enterprise dashboard for prospect / investor / partner private demo access. Bypasses the wallet-bind requirement.
+
+---
+
 ## 🤝 Why Bilateral Matters
 
 ### Unilateral Verification = One-Sided Trust
@@ -365,6 +396,9 @@ Runs integration tests against testnet and the live Observer Protocol API.
 - **WDK Docs:** https://docs.wallet.tether.io
 - **WDK GitHub:** https://github.com/tetherto/wdk-core
 - **Observer Protocol API:** https://api.observerprotocol.org
+- **Chargeback Defense Demo:** https://observerprotocol.org/chargeback-prevention/wdk/
+- **WDK + OP Trust Package:** https://github.com/observer-protocol/wdk-protocol-trust
+- **WDK + OP Lightning Verifier:** https://github.com/observer-protocol/wdk-lightning-verifier
 - **Stripe Quickstart:** https://observerprotocol.org/quickstart-stripe
 - **Hackathon:** Tether Hackathon Galáctica: WDK Edition 1
 
